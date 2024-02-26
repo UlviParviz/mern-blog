@@ -12,8 +12,8 @@ import {
 const FooterComp = () => {
   return (
     <Footer container className="text-center border border-t-8 border-tale-500">
-      <div className="w-full max-w-7xl mx-auto ">
-        <div className=" w-full justify-between flex items-stretch gap-3 flex-col justify-center lg:grid lg:grid-cols-2">
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full justify-between flex items-stretch gap-3 flex-col justify-center lg:grid lg:grid-cols-2">
           <div className="mt-5">
             <Link
               to="/"
@@ -29,25 +29,25 @@ const FooterComp = () => {
             <div className="flex flex-col items-start">
               <Footer.Title title="About" />
               <Footer.LinkGroup className="flex flex-col items-start">
-                <Footer.Link><Link to={'/about'}>Thirteen Blog</Link></Footer.Link>
+                <Link to={'/about'}>Thirteen Blog</Link>
               </Footer.LinkGroup>
             </div>
             <div className="flex flex-col items-start">
               <Footer.Title title="Follow us" />
               <Footer.LinkGroup className="flex flex-col items-start">
-                <Footer.Link
+                <a
                   href="https://github.com/UlviParvizoghlu"
-                  target="blank"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Github
-                </Footer.Link>
+                </a>
               </Footer.LinkGroup>
             </div>
             <div className="flex flex-col items-start">
               <Footer.Title title="Legal" />
               <Footer.LinkGroup className="flex flex-col items-start">
-                <Footer.Link href="#">Privacy Policy</Footer.Link>
+                <a href="#">Privacy Policy</a>
               </Footer.LinkGroup>
             </div>
           </div>
@@ -60,15 +60,11 @@ const FooterComp = () => {
             year={new Date().getFullYear()}
           />
           <div className="flex gap-6 sm:mt-0 mt-4 justify-center">
-            <Footer.Icon href="#" icon={BsFacebook} />
-            <Footer.Icon href="#" icon={BsInstagram} />
-            <Footer.Icon href="#" icon={BsTwitter} />
-            <Footer.Icon
-              href="https://github.com/UlviParvizoghlu"
-              target="blank"
-              icon={BsGithub}
-            />
-            <Footer.Icon href="#" icon={BsDribbble} />
+            <a href="#"><BsFacebook /></a>
+            <a href="#"><BsInstagram /></a>
+            <a href="#"><BsTwitter /></a>
+            <a href="https://github.com/UlviParvizoghlu" target="_blank" rel="noopener noreferrer"><BsGithub /></a>
+            <a href="#"><BsDribbble /></a>
           </div>
         </div>
       </div>
