@@ -2,14 +2,18 @@ import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
+import { signInStart, signInSuccess, signInFailure } from "../redux/user/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+
 
 const SignIn = () => {
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({})
-  const [errorMessage, setErrorMessage] = useState(null)
-  const [loading, setLoading] = useState(false)
+
+  const {loading, error: errorMessage} = useSelector(state => state.user)
 
   const handleChange = (e) => {
     setFormData({...formData, [e.target.id] : e.target.value.trim()})
@@ -19,29 +23,28 @@ const SignIn = () => {
     e.preventDefault();
 
     if(!formData.password || !formData.email){
-      return setErrorMessage('Please fill out all fields')
+      return dispatch(signInFailure('Please fill out all fields'))
     }
 
     try {
-      setLoading(true);
-      setErrorMessage(null);
+
+      dispatch(signInStart())
       const data = await axios.post('/api/auth/signin',formData)
 
       if(data.success === false){
-        return setErrorMessage(data.message)
+        dispatch(signInFailure(data.message))
       }
-      setLoading(false)
       if(data.status === 200){
+        dispatch(signInSuccess(data))
         navigate('/')
       }
     } catch (error) {
-      return setErrorMessage(error.message)
-      setLoading(false)
+
+      dispatch(signInFailure(error.message))
 
     }
   }
 
-  console.log(formData);
 
   return (
     <div className="min-h-screen flex items-center">
