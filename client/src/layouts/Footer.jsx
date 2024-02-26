@@ -11,9 +11,9 @@ import {
 
 const FooterComp = () => {
   return (
-    <Footer container className="border border-t-8 border-tale-500">
+    <Footer container className="text-center border border-t-8 border-tale-500">
       <div className="w-full max-w-7xl mx-auto ">
-        <div className="grid text-center w-full justify-between sm:flex md:grid-cols-1">
+        <div className=" w-full justify-between flex items-stretch gap-3 flex-col justify-center lg:grid lg:grid-cols-2">
           <div className="mt-5">
             <Link
               to="/"
@@ -26,15 +26,15 @@ const FooterComp = () => {
             </Link>
           </div>
           <div className="grid grid-cols-3 gap-8 mt-4 sm:grid-cols-3 sm:gap-6">
-            <div>
+            <div className="flex flex-col items-start">
               <Footer.Title title="About" />
-              <Footer.LinkGroup col>
+              <Footer.LinkGroup className="flex flex-col items-start">
                 <Footer.Link><Link to={'/about'}>Thirteen Blog</Link></Footer.Link>
               </Footer.LinkGroup>
             </div>
-            <div>
+            <div className="flex flex-col items-start">
               <Footer.Title title="Follow us" />
-              <Footer.LinkGroup col>
+              <Footer.LinkGroup className="flex flex-col items-start">
                 <Footer.Link
                   href="https://github.com/UlviParvizoghlu"
                   target="blank"
@@ -42,14 +42,12 @@ const FooterComp = () => {
                 >
                   Github
                 </Footer.Link>
-                <Footer.Link href="#">Discord</Footer.Link>
               </Footer.LinkGroup>
             </div>
-            <div>
+            <div className="flex flex-col items-start">
               <Footer.Title title="Legal" />
-              <Footer.LinkGroup col>
+              <Footer.LinkGroup className="flex flex-col items-start">
                 <Footer.Link href="#">Privacy Policy</Footer.Link>
-                <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>
@@ -61,7 +59,7 @@ const FooterComp = () => {
             by="Ulvi Parvizoghlu"
             year={new Date().getFullYear()}
           />
-          <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
+          <div className="flex gap-6 sm:mt-0 mt-4 justify-center">
             <Footer.Icon href="#" icon={BsFacebook} />
             <Footer.Icon href="#" icon={BsInstagram} />
             <Footer.Icon href="#" icon={BsTwitter} />
