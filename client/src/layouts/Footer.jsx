@@ -11,7 +11,7 @@ import {
 
 const FooterComp = () => {
   return (
-    <Footer container className="text-center border border-t-8 border-tale-500">
+    <Footer container className="text-center border-t">
       <div className="w-full max-w-7xl mx-auto">
         <div className="w-full justify-between flex items-stretch gap-3 flex-col justify-center lg:grid lg:grid-cols-2">
           <div className="mt-5">
