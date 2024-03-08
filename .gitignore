@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 //aaaaaaaaaa
+
+
+# Contentlayer
+.contentlayer

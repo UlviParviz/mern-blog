@@ -12,7 +12,7 @@ dotenv.config();
 
 //DB connect
 mongoose
-  .connect(process.env.DB_URL)
+  .connect('mongodb+srv://ulvispaethe:lanadelrey@mern-blog.z50n4ta.mongodb.net/')
   .then(() => {
     console.log('MongoDb is connected');
   })
