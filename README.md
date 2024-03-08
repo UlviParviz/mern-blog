@@ -35,14 +35,6 @@ npm install
 
 4. Visit 'http://localhost:5173' in your browser to view the website.
 
-## Contributing
-
-Contributions are welcome! Please read our [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
 ## Technologies Used
 
 ### Server:
