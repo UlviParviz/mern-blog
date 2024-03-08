@@ -38,17 +38,19 @@ export default function PostPage() {
   useEffect(() => {
     try {
       const fetchRecentPosts = async () => {
-        const res = await fetch(`/api/post/getposts?limit=3`);
+        const res = await fetch(`/api/post/getposts?limit=4`); // Get 4 most recent posts
         const data = await res.json();
         if (res.ok) {
-          setRecentPosts(data.posts);
+          // Exclude the current post from recentPosts if it exists
+          const filteredRecentPosts = data.posts.filter(recentPost => recentPost._id !== (post && post._id));
+          setRecentPosts(filteredRecentPosts);
         }
       };
       fetchRecentPosts();
     } catch (error) {
       console.log(error.message);
     }
-  }, []);
+  }, [post]);
 
   if (loading)
     return (
@@ -84,13 +86,13 @@ export default function PostPage() {
         className='p-3 max-w-2xl mx-auto w-full post-content'
         dangerouslySetInnerHTML={{ __html: post && post.content }}
       ></div>
-      <CommentSection postId={post._id} />
+      <CommentSection postId={post && post._id} />
 
       <div className='flex flex-col justify-center items-center mb-5'>
         <h1 className='text-xl mt-5'>Recent articles</h1>
         <div className='flex flex-wrap gap-5 mt-5 justify-center'>
           {recentPosts &&
-            recentPosts.map((post) => <PostCard key={post._id} post={post} />)}
+            recentPosts.map(post => <PostCard key={post._id} post={post} />)}
         </div>
       </div>
     </main>
