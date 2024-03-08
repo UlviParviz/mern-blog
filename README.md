@@ -8,10 +8,6 @@ echo "This project is a blog website developed using the MERN (MongoDB, Express.
 
 echo "A live demo of the website can be viewed [here](https://mern-bloog.onrender.com/)."
 
-# Screenshots
-
-echo "![Admin Dashboard](client/public/screenshots/home.png)"
-
 
 # Getting Started
 
