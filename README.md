@@ -17,14 +17,13 @@ git clone https://github.com/UlviParvizoghlu/mern-blog.git
 
 2. Install dependencies in both server and client folders:
 ```bash
-cd mern-blog/server
 npm install
-cd ../client
+cd client
 npm install
 ```
 
 3. Start the development server:
-- In the server folder:
+- In the mern-blog folder:
   ```
   npm run dev
   ```
