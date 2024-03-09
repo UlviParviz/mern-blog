@@ -1,39 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Ensure @import precedes other statements */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
+/* Global styles */
+* {
   font-family: "Poppins", sans-serif;
 }
 
+/* Specific font weights */
 .poppins-thin {
-  font-family: "Poppins", sans-serif;
   font-weight: 100;
-  font-style: normal;
 }
 
 .poppins-extralight {
-  font-family: "Poppins", sans-serif;
   font-weight: 200;
-  font-style: normal;
 }
 
 .poppins-light {
-  font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-style: normal;
 }
 
+/* Body styles */
 body {
   height: 100vh;
 }
 
+/* Quill editor styles */
 .ql-editor {
   font-size: 1.05rem;
 }
 
+/* Post content styles */
 .post-content p {
   margin-bottom: 0.5rem;
 }
@@ -41,16 +41,13 @@ body {
 .post-content h1 {
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  margin: 1.5rem 0;
 }
 
 .post-content h2 {
   font-size: 1.4rem;
-  font-family: "Poppins", sans-serif;
-  margin: 1.5rem 0;
 }
 
+/* Link styles */
 .post-content a {
   color: rgb(73, 149, 199);
   text-decoration: none;
@@ -60,6 +57,7 @@ body {
   text-decoration: underline;
 }
 
+/* Dark mode link styles */
 .dark .post-content a {
   color: red;
 }

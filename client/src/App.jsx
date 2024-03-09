@@ -14,10 +14,12 @@ import UpdatePost from './pages/UpdatePost'
 import PostPage from './pages/PostPage'
 import Search from './pages/Search'
 import Contact from './pages/Contact'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Header/>
       <Routes>
         <Route path='/' element={<Home />} />

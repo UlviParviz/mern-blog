@@ -14,22 +14,43 @@ export default function Banner() {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 6000,
-    speed:6000,
+    speed: 600,
     fade: true,
     variableWidth: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      }
+    ]
   };
+
   return (
-    <Slider  {...settings}>
-      <div className="w-[100%] h-[550px]" >
-        <img className="w-[100%] h-[100%] " src={BannerImage1} alt="" />
+    <Slider {...settings}>
+      <div className="w-full h-[550px] sm:h-[450px] md:h-[650px]">
+        <img className="w-full h-full object-cover" src={BannerImage1} alt="" />
       </div>
-      <div className="w-[100%] h-[550px]" >
-        <img className="w-[100%] h-[100%] " src={BannerImage2} alt="" />
+      <div className="w-full h-[550px] sm:h-[450px] md:h-[650px]">
+        <img className="w-full h-full object-cover" src={BannerImage2} alt="" />
       </div>
-      <div className="w-[100%] h-[550px]" >
-        <img className="w-[100%] h-[100%] " src={BannerImage3} alt="" />
+      <div className="w-full h-[550px] sm:h-[450px] md:h-[650px]">
+        <img className="w-full h-full object-cover" src={BannerImage3} alt="" />
       </div>
     </Slider>
   );
