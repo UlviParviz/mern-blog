@@ -12,7 +12,7 @@ To run the project on your local machine, follow these steps:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/UlviParvizoghlu/mern-blog.git
+git clone https://github.com/UlviParviz/mern-blog.git
 ```
 
 2. Install dependencies in both server and client folders:
